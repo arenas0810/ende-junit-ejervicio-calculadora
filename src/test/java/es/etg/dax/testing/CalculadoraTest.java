@@ -14,6 +14,48 @@ public class CalculadoraTest {
     Calculadora calculadora = new Calculadora(); //
 
     @Test
+    void dividirPositivos() throws OperacionNoValidaException {
+        assertEquals(5, Calculadora.dividir(10, 2));
+    }
+
+        @Test
+    void dividirNegativoEntrePositivo() throws OperacionNoValidaException {
+        assertEquals(-5, Calculadora.dividir(-10, 2));
+    }
+
+    @Test
+    void dividirNegativos() throws OperacionNoValidaException {
+        assertEquals(5, Calculadora.dividir(-10, -2));
+    }
+
+    @Test
+    void dividirEntreUno() throws OperacionNoValidaException {
+        assertEquals(7, Calculadora.dividir(5, 1));
+    }
+
+    @Test
+    void dividirEntreMenosUno() throws OperacionNoValidaException {
+        assertEquals(-7, Calculadora.dividir(5, -1));
+    }
+
+    @Test
+    void pruebaAleatoria1() throws OperacionNoValidaException {
+        assertEquals(9, Calculadora.dividir(27, 3));
+    }
+
+    @Test
+    void pruebaAleatoria2() throws OperacionNoValidaException {
+        assertEquals(-4, Calculadora.dividir(100, -25));
+    }
+
+    @Test
+    void dividirCeroEntreCero() {
+        assertThrows(OperacionNoValidaException.class, () -> {
+            Calculadora.dividir(0, 0);
+        });
+    }
+
+    @Test
     void sumarPositivos() {
 
         int valor1 = 2;
