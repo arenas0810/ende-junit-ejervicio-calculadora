@@ -50,6 +50,8 @@ Haz un fork de este proyecto en tu repositorio de Github y contesta a las siguie
     |V3|(5, 0)|Excepción|
     |V4|(0, 5)|0|
     |V5|(0, -5)|0|
+    |V6|(+infinito, 1)|+infinito|
+    |V7|(-infinito, 1)|-infinito|
 
     3. Pruebas aleatorias
 

@@ -18,7 +18,7 @@ public class CalculadoraTest {
         assertEquals(5, Calculadora.dividir(10, 2));
     }
 
-        @Test
+    @Test
     void dividirNegativoEntrePositivo() throws OperacionNoValidaException {
         assertEquals(-5, Calculadora.dividir(-10, 2));
     }
